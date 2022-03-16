@@ -1,0 +1,14 @@
+
+<svg viewBox="0.056 -4.465 49.866 62.211" width="49.866" height="62.211">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="24.99" y1="7.486" x2="24.99" y2="57.352" id="gradient-1-1" xlink:href="#gradient-1"></linearGradient>
+    <linearGradient id="gradient-1" data-bx-pinned="true">
+      <stop offset="0.107" style="stop-color: rgb(101, 21, 175);"></stop>
+      <stop offset="0.959" style="stop-color: rgb(193, 126, 255);"></stop>
+    </linearGradient>
+    <style data-bx-fonts="Amarante">@import url(https://fonts.googleapis.com/css2?family=Amarante%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+  </defs>
+  <rect x="0.056" y="0.058" width="49.866" height="49.866" style="stroke-linejoin: round; stroke-linecap: round; stroke-width: 0px; fill: url(#gradient-1-1);" rx="7.1" ry="7.1"></rect>
+  <text style="fill: rgb(255, 255, 255); font-family: Amarante; font-size: 49.8px; white-space: pre;" transform="matrix(0.824773, 0, 0, 1, 7.746064, -1.590662)" x="-5.419" y="46.227">J'</text>
+  <text style="fill: rgb(255, 255, 255); font-family: Amarante; font-size: 36.3px; white-space: pre;" data-bx-origin="0.553 0.625" x="28.145" y="45.216">S</text>
+</svg>
