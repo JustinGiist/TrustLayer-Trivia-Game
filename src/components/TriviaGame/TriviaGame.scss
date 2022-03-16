@@ -1,0 +1,350 @@
+:root {
+  --theme-text-title: #333;
+  --theme-primary: #4d8bff;
+  --theme-secondary: #a459ff;
+  --theme-teritary: #d8b8ff;
+  --theme-button-primary: #37e666;
+  --theme-button-primary-text: #ffffff;
+  --theme-button-secondary: #cacaca;
+  --theme-button-secondary-text: #ffffff;
+
+  --theme-primary-background: #ffffff;
+  --theme-secondary-background: #cad3d6;
+  --theme-success: #37e666;
+  --theme-info: #59cbf8;
+  --theme-warning: #ffad42;
+  --theme-error: #e63737;
+  --font-xlarge: 60px;
+  --font-large: 32px;
+  --font-medium: 24px;
+  --font-small: 16px;
+  --font-xsmall: 12px;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+.flex {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  justify-content: center;
+  .subtext {
+    text-align: center;
+  }
+}
+.triviaComponent {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(var(--theme-primary), var(--theme-secondary));
+  min-height: 100%;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  > .headlineTwo {
+    text-align: center;
+    color: var(--theme-teritary);
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 8px;
+    height: 40px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .triviaContent {
+    margin-top: 16px;
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 240px;
+    background-color: var(--theme-primary-background);
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.16);
+    animation: fadeSlideDown 0.267s forwards;
+    .triviaBody {
+      margin: 24px 16px 0 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 16px;
+      .headlineOne {
+        color: var(--theme-success);
+      }
+    }
+    .notifier {
+      display: none;
+      border-radius: 4px;
+      padding: 4px 12px 4px 8px;
+      color: #ffffff;
+      column-gap: 4px;
+      animation: fadeSlideDown 0.267s forwards;
+      &.correct {
+        display: flex;
+        background-color: var(--theme-success);
+      }
+      &.incorrect {
+        display: flex;
+        background-color: var(--theme-error);
+      }
+    }
+    .triviaHeader {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        color: var(--theme-text-title);
+      }
+      .right {
+        margin-left: 24px;
+        display: flex;
+        column-gap: 8px;
+        transform: translateX(16px) translateY(-16px);
+        .flex-column {
+          padding: 8px;
+          border-radius: 4px;
+          justify-content: flex-start;
+          height: fit-content;
+          row-gap: 0 !important;
+          .subtextTitle {
+            color: #ffffff;
+          }
+          .subtext {
+            text-transform: capitalize;
+            color: var(--theme-text-title);
+          }
+        }
+      }
+      .easy {
+        background-color: var(--theme-success);
+      }
+      .medium {
+        background-color: var(--theme-warning);
+      }
+      .hard {
+        background-color: var(--theme-error);
+      }
+      .info {
+        background-color: var(--theme-info);
+      }
+    }
+  }
+}
+.headlineOne {
+  letter-spacing: 0;
+  font-size: var(--font-xlarge);
+  font-weight: 700;
+}
+.headlineTwo {
+  letter-spacing: 0;
+  font-size: var(--font-large);
+  font-weight: 600;
+}
+.headlineThree {
+  letter-spacing: 0;
+  font-size: var(--font-large);
+}
+.headlineFour {
+  letter-spacing: 0;
+  font-size: var(--font-medium);
+}
+.headlineFive {
+  letter-spacing: 0;
+  font-size: var(--font-medium);
+  font-weight: 400;
+}
+.subtextTitle {
+  letter-spacing: 0;
+  font-size: var(--font-xsmall);
+  font-weight: 600;
+}
+.subtext {
+  letter-spacing: 0;
+  font-size: var(--font-small);
+  font-weight: 400;
+}
+.textTitle {
+  color: var(--theme-text-title);
+}
+.textPrimary {
+  color: var(--theme-text-primary);
+}
+.textHighContrast {
+  color: var(--theme-high-contrast);
+}
+.textMedContrast {
+  color: var(--theme-med-contrast);
+}
+.textLowContrast {
+  color: var(--theme-low-contrast);
+}
+.textSecondary {
+  color: var(--theme-text-secondary);
+}
+.textPlaceholder {
+  color: var(--theme-text-placeholder);
+}
+.Dark {
+  .button {
+    border: none !important;
+  }
+}
+.button {
+  padding: 4px 24px;
+  min-width: 98px;
+  border-radius: 4px;
+  min-height: 40px;
+  width: auto;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  transition: 0.267s all ease;
+  animation: fadeSlideDown 0.267s forwards;
+  &.icon {
+    width: fit-content;
+    height: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+    border: none !important;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+}
+.button:hover {
+  cursor: pointer;
+}
+.button.circle {
+  min-width: 60px;
+  max-height: 60px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 100%;
+}
+.button.primary {
+  background-color: var(--theme-button-primary);
+  color: var(--theme-button-primary-text);
+  border: 1px solid var(--theme-button-primary);
+}
+.button.primary:hover {
+  background-color: var(--theme-button-primary-text);
+  color: var(--theme-button-primary);
+  border: 1px solid var(--theme-button-primary);
+}
+.button.transparent {
+  background-color: transparent;
+  border: none;
+}
+.button.transparent:hover {
+  border: 1px solid var(--theme-button-secondary-text);
+}
+.button.secondary {
+  background-color: var(--theme-button-secondary);
+  color: var(--theme-button-secondary-text);
+  svg {
+    fill: var(--theme-button-secondary-text);
+  }
+}
+.button.secondary:hover {
+  background-color: var(--theme-button-secondary-text);
+  color: var(--theme-button-secondary);
+  border: 1px solid var(--theme-button-secondary);
+  span {
+    color: var(--theme-button-secondary) !important;
+  }
+  svg {
+    fill: var(--theme-button-secondary);
+  }
+}
+.button.secondaryAccent {
+  background-color: var(--theme-button-secondary-accent);
+  color: var(--theme-button-secondary-accent-text);
+  border: 1px solid var(--theme-button-secondary-accent);
+}
+.button.secondaryAccent:hover {
+  background-color: var(--theme-button-secondary-accent-text);
+  color: var(--theme-button-secondary-accent);
+}
+.button.success {
+  background-color: var(--theme-success);
+  color: var(--theme-success-text);
+  border: 1px solid var(--theme-success-text);
+}
+.button.success:hover {
+  background-color: var(--theme-button-success-text);
+  color: var(--theme-success);
+}
+.button.info {
+  background-color: var(--theme-info);
+  color: var(--theme-info-text);
+  border: 1px solid var(--theme-info-text);
+}
+.button.info:hover {
+  background-color: var(--theme-info-text);
+  color: var(--theme-info);
+}
+.button.warning {
+  background-color: var(--theme-warning);
+  color: var(--theme-warning-text);
+  border: 2px solid var(--theme-warning-text);
+}
+.button.warning:hover {
+  background-color: var(--theme-warning-text);
+  color: var(--theme-warning);
+}
+.button.disabled {
+  background-color: var(--theme-disabled);
+  color: var(--theme-disabled-text);
+}
+.button.disabled:hover {
+  background-color: var(--theme-disabled-text);
+  color: var(--theme-disabled);
+}
+.errorText {
+  color: var(--theme-error);
+}
+.subtext {
+  text-transform: capitalize;
+}
+.recordItem {
+  border-bottom: 2px solid #c9c9c9;
+  display: grid;
+  grid-template-columns: 240px auto auto;
+  width: 100%;
+  &.active {
+    animation: grow 2s ease infinite forwards;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .triviaContent {
+    min-width: 320px !important;
+    width: fit-content !important;
+
+    max-width: 100% !important;
+  }
+  .buttonContainer {
+    height: fit-content !important;
+    min-height: 96px;
+  }
+  .recordItem {
+    grid-template-columns: 120px auto auto;
+  }
+  .triviaComponent > .headlineTwo {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}
